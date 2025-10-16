@@ -1,8 +1,22 @@
-# compiled output
-/dist
-/node_modules
+# ============================
+# 🔧 Node & Build Outputs
+# ============================
 
-# Logs
+# Ignore node_modules everywhere
+**/node_modules/
+
+# Ignore compiled NestJS build output
+**/dist/
+
+# ============================
+# 🧪 Test Coverage
+# ============================
+/coverage
+/.nyc_output
+
+# ============================
+# 🗂️ Logs
+# ============================
 logs
 *.log
 npm-debug.log*
@@ -11,14 +25,16 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
-# OS
-.DS_Store
+# ============================
+# 🧠 Environment Files
+# ============================
+*.env
+*.env.*
 
-# Tests
-/coverage
-/.nyc_output
-
-# IDEs and editors
+# ============================
+# 💻 IDE & Editor Files
+# ============================
+# JetBrains / Eclipse / Sublime / Cloud9
 /.idea
 .project
 .classpath
@@ -27,12 +43,15 @@ lerna-debug.log*
 .settings/
 *.sublime-workspace
 
-# IDE - VSCode
+# VS Code
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 
-# Environment Variables
-.env node_modules/
+# ============================
+# 🖥️ OS Files
+# ============================
+.DS_Store
+Thumbs.db

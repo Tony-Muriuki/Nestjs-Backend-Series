@@ -1,0 +1,2 @@
+cd ~/Desktop/NEST-SERIES
+cp -r lesson01 lesson02

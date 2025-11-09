@@ -36,6 +36,15 @@ export class UsersController {
     return this.usersService.create(createUserDto);
   }
 
+  @Patch(':id') // PATCH /users/:id
+  update(
+    @Param('id', ParseIntPipe) id: number,
+    @Body(ValidationPipe)
+    updateUserDto: UpdateUserDto,
+  ) {
+    return this.usersService.update(id, updateUserDto);
+  }
+
   @Delete(':id') // DELETE /users/:id
   delete(@Param('id', ParseIntPipe) id: number) {
     return this.usersService.delete(id);
